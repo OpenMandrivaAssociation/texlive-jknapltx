@@ -1,3 +1,9 @@
+# revision 19440
+# category Package
+# catalog-ctan /macros/latex/contrib/jknappen
+# catalog-date 2006-12-15 11:08:32 +0100
+# catalog-license gpl
+# catalog-version undef
 Name:		texlive-jknapltx
 Version:	20061215
 Release:	1
@@ -62,6 +68,7 @@ maths "minus" in text as appropriate; - simple Young tableaux.
 %doc %{_texmfdistdir}/doc/latex/jknapltx/README.TEXLIVE
 %doc %{_texmfdistdir}/doc/latex/jknapltx/mathbbol.rme
 %doc %{_texmfdistdir}/doc/latex/jknapltx/mathrsfs.rme
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -72,3 +79,5 @@ maths "minus" in text as appropriate; - simple Young tableaux.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
