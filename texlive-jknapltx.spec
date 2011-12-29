@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 Miscellaneous macros by Jorg Knappen, including: - represent
@@ -31,20 +29,12 @@ Roman and Sans fonts; - transliterate semitic languages; -
 patches to make (La)TeX formulae embeddable in SGML; - use
 maths "minus" in text as appropriate; - simple Young tableaux.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -69,7 +59,6 @@ maths "minus" in text as appropriate; - simple Young tableaux.
 %doc %{_texmfdistdir}/doc/latex/jknapltx/README.TEXLIVE
 %doc %{_texmfdistdir}/doc/latex/jknapltx/mathbbol.rme
 %doc %{_texmfdistdir}/doc/latex/jknapltx/mathrsfs.rme
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -80,5 +69,3 @@ maths "minus" in text as appropriate; - simple Young tableaux.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
