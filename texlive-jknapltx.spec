@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-jknapltx
 Version:	20061215
-Release:	5
+Release:	6
 Summary:	Miscellaneous packages by Joerg Knappen
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jknappen
