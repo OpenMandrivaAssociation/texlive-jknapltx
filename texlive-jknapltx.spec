@@ -5,7 +5,7 @@
 # catalog-license gpl
 # catalog-version undef
 Name:		texlive-jknapltx
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	Miscellaneous packages by Joerg Knappen
 Group:		Publishing
