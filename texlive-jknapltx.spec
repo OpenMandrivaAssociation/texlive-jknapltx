@@ -1,6 +1,6 @@
 Name:		texlive-jknapltx
 Version:	19440
-Release:	1
+Release:	2
 Summary:	Miscellaneous packages by Joerg Knappen
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jknappen
