@@ -3,7 +3,7 @@ Version:	19440
 Release:	2
 Summary:	Miscellaneous packages by Joerg Knappen
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/jknappen
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/jknappen
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jknapltx.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/jknapltx.doc.r%{version}.tar.xz
