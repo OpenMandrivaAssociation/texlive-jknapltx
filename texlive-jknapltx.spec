@@ -1,5 +1,5 @@
 %global tl_name jknapltx
-%global tl_revision 19440
+%global tl_revision 79739
 
 Name:		texlive-%{tl_name}
 Version:	%{tl_revision}
@@ -12,6 +12,7 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/jknapltx.r%{tl_r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/jknapltx.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
+Requires:	texlive(rsfs)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
